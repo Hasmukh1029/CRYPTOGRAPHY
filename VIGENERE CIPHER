@@ -14,9 +14,7 @@ void vigenereEncrypt(char* plaintext, char* key) {
 
             plaintext[i] = (char)((((plaintext[i] - base) + (keyChar - base)) % 26) + base);
             j = (j + 1) % keyLength;  // Move to the next character in the key
-        }
-    }
-}
+        }}}
 
 // Function to decrypt the ciphertext using Vigenère Cipher
 void vigenereDecrypt(char* ciphertext, char* key) {
@@ -30,9 +28,7 @@ void vigenereDecrypt(char* ciphertext, char* key) {
 
             ciphertext[i] = (char)((((ciphertext[i] - base) - (keyChar - base) + 26) % 26) + base);
             j = (j + 1) % keyLength;  // Move to the next character in the key
-        }
-    }
-}
+        }}}
 
 int main() {
     char text[100];
@@ -56,6 +52,5 @@ int main() {
     // Decryption
     vigenereDecrypt(text, key);
     printf("Decrypted Text: %s\n", text);
-
     return 0;
 }
